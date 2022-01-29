@@ -3,6 +3,7 @@ import org.testng.annotations.Test;
 
 import static constants.Constants.Actions.*;
 import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.requestSpecification;
 
 public class JsonPlaceHolderTest extends TestConfig {
 
@@ -46,9 +47,9 @@ public class JsonPlaceHolderTest extends TestConfig {
                 "\"userId\":1\n" +
                 "}";
 
-        given().body(postJsonBody).log().uri().
+        given().body(postJsonBody).log().all().
                 when().post(JSON_PLACEHOLDER_POST).
-                then().log().body().statusCode(201);
+                then().spec(responseSpecificationForPost).log().body();
 
     }
 
@@ -69,9 +70,9 @@ public class JsonPlaceHolderTest extends TestConfig {
                 "  </Employee>\n" +
                 "</Company>";
 
-        given().body(postXmlBody).log().uri().
+        given().spec(requestSpecificationXml).body(postXmlBody).log().all().
                 when().post("").
-                then().log().body().statusCode(200);
+                then().spec(responseSpecificationForGet).log().body();
 
     }
 
