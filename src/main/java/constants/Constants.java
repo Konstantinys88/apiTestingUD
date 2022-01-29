@@ -5,7 +5,7 @@ public class Constants {
 
     public static class RunVeriable{
 
-        public static String server = Servers.JSON_PLACEHOLDER_URL;
+        public static String server = Servers.REQUSTBIN_URL;
         public static String path = "";
 
     }
@@ -14,6 +14,7 @@ public class Constants {
         public static String SWAPI_URL = "https://swapi.dev/";
         public static String JSON_PLACEHOLDER_URL = "https://jsonplaceholder.typicode.com/";
         public static String GOOGLE_PLACES_URL;
+        public static String REQUSTBIN_URL = "https://enzoae5w1ocnn.x.pipedream.net";
 
     }
 
@@ -29,6 +30,7 @@ public class Constants {
         public static String JSON_PLACEHOLDER_GET = "comments/";
         public static String JSON_PLACEHOLDER_PUT = "posts/1";
         public static String JSON_PLACEHOLDER_DELETE = "posts/1";
+        public static String JSON_PLACEHOLDER_POST = "posts/";
 
     }
 
