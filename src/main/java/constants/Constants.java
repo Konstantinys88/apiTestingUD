@@ -5,8 +5,8 @@ public class Constants {
 
     public static class RunVeriable{
 
-        public static String server = Servers.SWAPI_URL;
-        public static String path = Path.SWAPI_PATH;
+        public static String server = Servers.JSON_PLACEHOLDER_URL;
+        public static String path = "";
 
     }
 
@@ -26,6 +26,9 @@ public class Constants {
     public static class Actions{
         public static String SWAPI_GET_PEOPLE = "people/";
         public static String GOOGLE_PLACES_URL;
+        public static String JSON_PLACEHOLDER_GET = "comments/";
+        public static String JSON_PLACEHOLDER_PUT = "posts/1";
+        public static String JSON_PLACEHOLDER_DELETE = "posts/1";
 
     }
 
