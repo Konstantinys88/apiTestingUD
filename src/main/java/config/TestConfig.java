@@ -10,8 +10,13 @@ import org.testng.annotations.BeforeClass;
 
 import static constants.Constants.RunVeriable.*;
 import static constants.Constants.Servers.REQUSTBIN_URL;
+import static constants.Constants.Servers.SWAPI_URL;
 
 public class TestConfig {
+
+    protected RequestSpecification requestSpecificationForSwapiTests = new RequestSpecBuilder()
+            .setBaseUri(SWAPI_URL)
+            .build();
 
     protected RequestSpecification requestSpecificationXml = new RequestSpecBuilder()
             .addHeader("Content-Type", "application/xml")
